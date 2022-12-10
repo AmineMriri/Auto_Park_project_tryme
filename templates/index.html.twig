@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 
-
-{#3asba lik ya aminee el kaboul#}
 <html>
 <head>
 
@@ -41,16 +39,6 @@
 </head>
 <body>
 {% block body %}
-
-
-
-    <form action="" method="Post">
-        {{ form_widget(formReserv) }}
-        <input type="submit" value="Reserver">
-    </form>
-
-
-
 
     <div class="hero_area">
         <!-- header section strats -->
@@ -159,38 +147,39 @@
         </section>
         <!-- end slider section -->
     </div>
- 
 
     <!-- find section -->
     <section class="find_section">
         <div class="container">
-            <form action="">
+            <form action="" method="Post">
+                {{ form_start(formReserv) }}
                 <div class=" form-row">
                     <div class="col-lg-3">
-                        <label for="carPark">Select Car Park</label>
-                        <select name="" id="carPark" class="form-control">
-                            <option value="">First Floor</option>
-                            <option value="">Option 1</option>
-                            <option value="">Option 2</option>
-                        </select>
+                        {{ form_label(formReserv.name) }}
+                        {{ form_widget(formReserv.name) }}
                     </div>
                     <div class="col-lg-3">
-                        <label for="parkingName">Your Name Here</label>
-                        <input type="text" class="form-control" placeholder="jack frod " id="parkingName">
+                        {{ form_label(formReserv.phone) }}
+                        {{ form_widget(formReserv.phone) }}
                     </div>
 
-                    <div class="col-lg-3">
-                        <label for="parkingNumber">Your Phone Number</label>
-                        <input type="text" class="form-control" placeholder="+01 1234567890 " id="parkingNumber">
+                    <div class="col-lg-2">
+                        {{ form_label(formReserv.periode) }}
+                        {{ form_widget(formReserv.periode) }}
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
+                        {{ form_label(formReserv.park) }}
+                    {{ form_widget(formReserv.park) }}
+                    </div>
+                    <div class="col-lg-2">
                         <div class="btn-container">
                             <button type="submit" class="">
-                                Request a call
+                                Reserver
                             </button>
                         </div>
                     </div>
                 </div>
+                {{ form_end(formReserv) }}
 
             </form>
         </div>
