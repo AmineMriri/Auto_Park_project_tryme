@@ -33,7 +33,7 @@ class Contact
     private $phone;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=254)
      */
     private $message;
 
