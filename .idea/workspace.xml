@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="fixed form reservation">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20221211012347.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221210120002.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20221211014550.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221210120240.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/sign-up.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/sign-up.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InscritController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InscritController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +33,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="849ae21e-c33d-4768-94cb-946f94bf2cfb" />
+      <phar pharPath="E:\xampp\htdocs\Auto_Park_project_tryme\composer.phar" interpreterId="f03a60bc-ceca-45f4-b37b-4d2d774c85f8" />
     </execution>
   </component>
   <component name="Git.Settings">
@@ -173,9 +192,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/park-auto&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/xampp/htdocs/pvmm&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.zend.framework.tool&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -197,8 +220,8 @@
       <command value="symfony make:auth" />
       <command value="symfony make:entity " />
       <command value="symfony make:form " />
-      <command value="symfony doctrine:database:create" />
       <command value="symfony make:entity  " />
+      <command value="symfony doctrine:database:create" />
       <command value="symfony make:migration" />
       <command value="symfony doctrine:migrations:migrate " />
     </option>
@@ -232,6 +255,12 @@
       <workItem from="1670593038856" duration="2757000" />
       <workItem from="1670598511480" duration="1583000" />
       <workItem from="1670670866466" duration="2864000" />
+      <workItem from="1670718658059" duration="542000" />
+      <workItem from="1670719243353" duration="9762000" />
+      <workItem from="1670729990856" duration="948000" />
+      <workItem from="1670730975763" duration="1054000" />
+      <workItem from="1670773709255" duration="1478000" />
+      <workItem from="1670798128564" duration="8258000" />
     </task>
     <task id="LOCAL-00001" summary="5amsa w 5miss">
       <created>1670585634934</created>

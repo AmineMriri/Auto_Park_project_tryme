@@ -14,14 +14,14 @@ class IndexController extends AbstractController
     /**
      * @Route("/index", name="app_index")
      */
-    public function index()
-    {
-        return $this->render('index.html.twig');
-    }
-
-    /**
-     * @Route("/addReserv", name="app_reserv")
-     */
+//    public function index()
+//    {
+//        return $this->render('index.html.twig');
+//    }
+//
+//    /**
+//     * @Route("/addReserv", name="app_reserv")
+//     */
     public function addReserv(Request $request): Response
     {
         $res = new Reservation();
@@ -42,4 +42,5 @@ class IndexController extends AbstractController
             ]);
     }
 }
+
 

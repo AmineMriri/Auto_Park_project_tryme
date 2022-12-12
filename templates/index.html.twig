@@ -1,336 +1,343 @@
-<!DOCTYPE html>
+{#{% if app.user %}#}
+    <!DOCTYPE html>
+    <html>
+    <head>
 
-<html>
-<head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
 
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>{% block title %}Autopark{% endblock %}</title>
-    {# Run `composer require symfony/webpack-encore-bundle`
+        <title>{% block title %}Autopark{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to symfonystart using Symfony UX #}
-    {% block stylesheets %}
-        {#{{ encore_entry_link_tags('app') }}#}
-        <!-- bootstrap core css -->
-        <link  href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet" />
-        <!-- fonts style -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <!-- bootstrap core css -->
+            <link  href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet" />
+            <!-- fonts style -->
+            <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 
-        <!-- Custom styles for this template -->
-        <link  href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
-        <!-- responsive style -->
-        <link  href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
-    {% endblock %}
+            <!-- Custom styles for this template -->
+            <link  href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+            <!-- responsive style -->
+            <link  href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
+        {% endblock %}
 
-    {% block javascripts %}
-        {#{{ encore_entry_script_tags('app') }}#}
-        <script type="text/javascript"  src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
-        <script type="text/javascript"  src="{{ asset('assets/js/bootstrap.js') }}"></script>
-        <script type="text/javascript"  src="{{ asset('assets/js/custom.js') }}"></script>
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+            <script type="text/javascript"  src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+            <script type="text/javascript"  src="{{ asset('assets/js/bootstrap.js') }}"></script>
+            <script type="text/javascript"  src="{{ asset('assets/js/custom.js') }}"></script>
 
-    {% endblock %}
-</head>
-<body>
-{% block body %}
+        {% endblock %}
+    </head>
+    <body>
+    {% block body %}
 
-    <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg custom_nav-container">
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
 
-                    <a class="navbar-brand" href="{{ path('app_index') }}">
+                        <a class="navbar-brand" href="{{ path('app_index') }}">
             <span>
               Autospar
             </span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                                <ul class="navbar-nav  ">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ path('app_index') }}">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="{{ path('app_about') }}">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('app_feature') }}">Features </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('app_service') }}"> Services </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('app_contact') }}">Contact us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('app_login') }}">Sign-In/Sign-Up</a>
+                                    </li>
+                                </ul>
+
+                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+            <!-- slider section -->
+            <section class=" slider_section ">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="detail-box">
+                                    <h1>
+                                        The Best <br>
+                                        Deals For Parking lots
+                                    </h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    </p>
+                                    <div>
+                                        <a href="">
+                                            Contact us
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="detail-box">
+                                    <h1>
+
+                                        The Best <br>
+                                        Deals For Parking lots
+                                    </h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    </p>
+                                    <div>
+                                        <a href="">
+                                            Contact us
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                            <ul class="navbar-nav  ">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{{ path('app_index') }}">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="{{ path('app_about') }}">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('app_feature') }}">Features </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('app_service') }}"> Services </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('app_contact') }}">Contact us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('app_login') }}">Sign-In/Sign-Up</a>
-                                </li>
-                            </ul>
-                            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                            </form>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!-- end header section -->
-        <!-- slider section -->
-        <section class=" slider_section ">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="detail-box">
-                                <h1>
-                                    The Best <br>
-                                    Deals For Parking lots
-                                </h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                </p>
-                                <div>
-                                    <a href="">
-                                        Contact us
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="detail-box">
-                                <h1>
-
-                                    The Best <br>
-                                    Deals For Parking lots
-                                </h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                </p>
-                                <div>
-                                    <a href="">
-                                        Contact us
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
 
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            </section>
+            <!-- end slider section -->
+        </div>
+        {% if app.user %}
 
+        <!-- find section -->
+        <section class="find_section">
+            <div class="container">
+                <form action="" method="Post">
+                    {{ form_start(formReserv) }}
+                    <div class=" form-row">
+                        <div class="col-lg-3">
+                            {{ form_label(formReserv.name) }}
+                            {{ form_widget(formReserv.name) }}
+                        </div>
+                        <div class="col-lg-3">
+                            {{ form_label(formReserv.phone) }}
+                            {{ form_widget(formReserv.phone) }}
+                        </div>
+
+                        <div class="col-lg-2">
+                            {{ form_label(formReserv.periode) }}
+                            {{ form_widget(formReserv.periode) }}
+                        </div>
+                        <div class="col-lg-2">
+                            {{ form_label(formReserv.park) }}
+                            {{ form_widget(formReserv.park) }}
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="btn-container">
+                                <button type="submit" class="">
+                                    Reserver
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {{ form_end(formReserv) }}
+
+                </form>
+            </div>
         </section>
-        <!-- end slider section -->
-    </div>
+        {% else %}
+            <div class="mb-3">
+                You have to <a href="{{ path('app_login') }}">login</a> to perchase a parking spot
+            </div>
+        {% endif %}
 
-    <!-- find section -->
-    <section class="find_section">
-        <div class="container">
-            <form action="" method="Post">
-                {{ form_start(formReserv) }}
-                <div class=" form-row">
-                    <div class="col-lg-3">
-                        {{ form_label(formReserv.name) }}
-                        {{ form_widget(formReserv.name) }}
-                    </div>
-                    <div class="col-lg-3">
-                        {{ form_label(formReserv.phone) }}
-                        {{ form_widget(formReserv.phone) }}
-                    </div>
+        <!-- end find section -->
 
-                    <div class="col-lg-2">
-                        {{ form_label(formReserv.periode) }}
-                        {{ form_widget(formReserv.periode) }}
-                    </div>
-                    <div class="col-lg-2">
-                        {{ form_label(formReserv.park) }}
-                    {{ form_widget(formReserv.park) }}
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="btn-container">
-                            <button type="submit" class="">
-                                Reserver
-                            </button>
+        <!-- feature section -->
+        <section class="feature_section layout_padding2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="{{ asset('assets/images/money.png') }}" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Save Money
+                                </h5>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {{ form_end(formReserv) }}
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="{{ asset('assets/images/clock.png') }}" alt="">
 
-            </form>
-        </div>
-    </section>
-
-    <!-- end find section -->
-
-    <!-- feature section -->
-    <section class="feature_section layout_padding2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="{{ asset('assets/images/money.png') }}" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Save Money
-                            </h5>
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content
-                            </p>
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Save Time
+                                </h5>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="{{ asset('assets/images/clock.png') }}" alt="">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="{{ asset('assets/images/man.png') }}" alt="">
 
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Save Time
-                            </h5>
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="{{ asset('assets/images/man.png') }}" alt="">
-
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Save Stress
-                            </h5>
-                            <p>
-                                It is a long established fact that a reader will be distracted by the readable content
-                            </p>
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Save Stress
+                                </h5>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- end feature section -->
+        <!-- end feature section -->
 
-    <!-- why section -->
-    <section class="why_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                Why Choose Us
-                            </h2>
-                        </div>
+        <!-- why section -->
+        <section class="why_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <div class="heading_container">
+                                <h2>
+                                    Why Choose Us
+                                </h2>
+                            </div>
 
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                            in
-                            some form, by injected humour, or randomised words which don't look even slightly believable. If you are
-                        </p>
-                        <div>
-                            <a href="">
-                                Read More
-                            </a>
+                            <p>
+                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                                in
+                                some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+                            </p>
+                            <div>
+                                <a href="">
+                                    Read More
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img-container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/images/w-1.jpg') }}" alt="">
+                    <div class="col-md-6">
+                        <div class="img-container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="img-box">
+                                        <img src="{{ asset('assets/images/w-1.jpg') }}" alt="">
 
-                                    <a href="">
-                                        <img src="{{ asset('assets/images/link.png') }}" alt="">
+                                        <a href="">
+                                            <img src="{{ asset('assets/images/link.png') }}" alt="">
 
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/images/w-2.jpg') }}" alt="">
+                                <div class="col-sm-6">
+                                    <div class="img-box">
+                                        <img src="{{ asset('assets/images/w-2.jpg') }}" alt="">
 
-                                    <a href="">
-                                        <img src="{{ asset('assets/images/link.png') }}" alt="">
-                                    </a>
+                                        <a href="">
+                                            <img src="{{ asset('assets/images/link.png') }}" alt="">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/images/w-3.jpg') }}" alt="">
-                                    <a href="">
-                                        <img src="{{ asset('assets/images/link.png') }}" alt="">
-                                    </a>
+                                <div class="col-sm-6">
+                                    <div class="img-box">
+                                        <img src="{{ asset('assets/images/w-3.jpg') }}" alt="">
+                                        <a href="">
+                                            <img src="{{ asset('assets/images/link.png') }}" alt="">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/images/w-4.jpg') }}" alt="">
-                                    <a href="">
-                                        <img src="{{ asset('assets/images/link.png') }}" alt="">
-                                    </a>
+                                <div class="col-sm-6">
+                                    <div class="img-box">
+                                        <img src="{{ asset('assets/images/w-4.jpg') }}" alt="">
+                                        <a href="">
+                                            <img src="{{ asset('assets/images/link.png') }}" alt="">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- end why section -->
+        <!-- end why section -->
 
-    <!-- service section -->
+        <!-- service section -->
 
-    <section class="service_section layout_padding-bottom">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Our Services
-                </h2>
-            </div>
-            <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-                some form, by injected humour, or randomised words which don't look even slightly believable. If
-            </p>
-            <div class="box">
-                <div class="img-box">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="355.555px" height="355.555px" viewBox="0 0 355.555 355.555" style="enable-background:new 0 0 355.555 355.555;" xml:space="preserve">
+        <section class="service_section layout_padding-bottom">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        Our Services
+                    </h2>
+                </div>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+                    some form, by injected humour, or randomised words which don't look even slightly believable. If
+                </p>
+                <div class="box">
+                    <div class="img-box">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="355.555px" height="355.555px" viewBox="0 0 355.555 355.555" style="enable-background:new 0 0 355.555 355.555;" xml:space="preserve">
             <g>
                 <g>
                     <path d="M107.412,266.641c-15.434,0-27.941,12.502-27.941,27.938s12.508,27.938,27.941,27.938
@@ -388,58 +395,58 @@
                     <path d="M34.552,162.794c0,2.762,2.239,5,5,5c2.762,0,5-2.238,5-5v-10c0-2.761-2.238-5-5-5c-2.761,0-5,2.239-5,5V162.794z" />
                 </g>
             </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
           </svg>
 
-                </div>
-                <div class="detail-box">
-                    <h5>
-                        Car Wash
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
-                        consectetur adipiscing eullamco
-                    </p>
-                    <div>
-                        <a href="">
-                            Read More
-                        </a>
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Car Wash
+                        </h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
+                            consectetur adipiscing eullamco
+                        </p>
+                        <div>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <div class="box">
+                    <div class="img-box">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <g>
                 <g>
                     <path d="M510.329,332.836c-0.203-0.668-0.422-1.322-0.657-1.963c-5.489-15.085-19.959-25.221-36.008-25.221
@@ -462,9 +469,9 @@
                c7.671,0,14.589,4.846,17.223,12.084c0.114,0.313,0.216,0.619,0.309,0.925C493.92,347.619,489.477,357.163,480.86,360.861z" />
                 </g>
             </g>
-                        <g>
                             <g>
-                                <path d="M58.799,296.31c-0.121-0.64-0.32-1.27-0.57-1.87c-0.25-0.61-0.56-1.19-0.92-1.73c-0.36-0.55-0.78-1.06-1.24-1.52
+                                <g>
+                                    <path d="M58.799,296.31c-0.121-0.64-0.32-1.27-0.57-1.87c-0.25-0.61-0.56-1.19-0.92-1.73c-0.36-0.55-0.78-1.06-1.24-1.52
                c-0.46-0.46-0.97-0.88-1.52-1.24c-0.54-0.36-1.12-0.67-1.72-0.92c-0.61-0.25-1.24-0.44-1.88-0.57c-1.28-0.26-2.61-0.26-3.9,0
                c-0.64,0.13-1.27,0.32-1.87,0.57c-0.61,0.25-1.19,0.56-1.73,0.92c-0.55,0.36-1.06,0.78-1.52,1.24c-0.46,0.46-0.88,0.97-1.24,1.52
                c-0.36,0.54-0.67,1.12-0.92,1.73c-0.25,0.6-0.44,1.23-0.57,1.87c-0.13,0.64-0.2,1.3-0.2,1.95s0.07,1.31,0.2,1.96
@@ -472,11 +479,11 @@
                c0.54,0.36,1.12,0.67,1.73,0.92c0.6,0.25,1.23,0.44,1.87,0.57s1.3,0.19,1.95,0.19c0.65,0,1.31-0.06,1.95-0.19s1.27-0.32,1.88-0.57
                c0.6-0.25,1.18-0.56,1.72-0.92c0.55-0.37,1.06-0.79,1.52-1.25c0.46-0.46,0.88-0.97,1.24-1.52c0.36-0.54,0.67-1.12,0.92-1.72
                c0.25-0.61,0.45-1.24,0.57-1.87c0.13-0.65,0.2-1.31,0.2-1.96S58.929,296.95,58.799,296.31z" />
+                                </g>
                             </g>
-                        </g>
-                        <g>
                             <g>
-                                <path d="M407.109,56.901c-39.333,0-73.672,21.768-91.621,53.884h-43.288c-2.55,0-5.004,0.974-6.859,2.724l-8.345,7.866
+                                <g>
+                                    <path d="M407.109,56.901c-39.333,0-73.672,21.768-91.621,53.884h-43.288c-2.55,0-5.004,0.974-6.859,2.724l-8.345,7.866
                l-8.343-7.866c-1.855-1.749-4.309-2.724-6.86-2.724h-17.068c-2.55,0-5.004,0.974-6.859,2.724l-8.345,7.866l-8.343-7.866
                c-1.855-1.749-4.31-2.724-6.86-2.724h-17.069c-2.55,0-5.004,0.974-6.86,2.724l-8.344,7.866l-8.344-7.866
                c-1.856-1.749-4.31-2.724-6.86-2.724h-24.332c-3.134,0-6.086,1.469-7.977,3.969l-31,41c-2.698,3.568-2.698,8.494,0,12.063l31,41
@@ -490,18 +497,18 @@
                c-45.319,0-82.455-35.699-84.769-80.453c-0.004-0.076-0.006-0.153-0.009-0.229c-0.068-1.393-0.107-2.794-0.107-4.203
                c0-1.41,0.038-2.81,0.107-4.203c0.004-0.076,0.005-0.153,0.009-0.229c2.314-44.753,39.45-80.452,84.769-80.452
                c46.805,0,84.884,38.079,84.884,84.884S453.915,246.67,407.109,246.67z" />
+                                </g>
                             </g>
-                        </g>
-                        <g>
                             <g>
-                                <path d="M428.135,112.468c-27.194,0-49.317,22.124-49.317,49.317s22.124,49.317,49.317,49.317s49.317-22.124,49.317-49.317
+                                <g>
+                                    <path d="M428.135,112.468c-27.194,0-49.317,22.124-49.317,49.317s22.124,49.317,49.317,49.317s49.317-22.124,49.317-49.317
                S455.329,112.468,428.135,112.468z M428.135,191.102c-16.166,0-29.318-13.152-29.318-29.318s13.152-29.318,29.318-29.318
                s29.318,13.152,29.318,29.318S444.301,191.102,428.135,191.102z" />
+                                </g>
                             </g>
-                        </g>
-                        <g>
                             <g>
-                                <path d="M153.167,159.832c-0.13-0.64-0.32-1.27-0.57-1.87c-0.25-0.6-0.56-1.19-0.92-1.73c-0.37-0.54-0.79-1.06-1.25-1.52
+                                <g>
+                                    <path d="M153.167,159.832c-0.13-0.64-0.32-1.27-0.57-1.87c-0.25-0.6-0.56-1.19-0.92-1.73c-0.37-0.54-0.79-1.06-1.25-1.52
                c-0.46-0.46-0.97-0.88-1.52-1.24c-0.54-0.36-1.12-0.67-1.72-0.92c-0.61-0.25-1.24-0.44-1.87-0.57c-1.29-0.26-2.62-0.26-3.91,0
                c-0.64,0.13-1.27,0.32-1.87,0.57c-0.61,0.25-1.19,0.56-1.73,0.92c-0.55,0.36-1.06,0.78-1.52,1.24c-0.46,0.46-0.88,0.98-1.24,1.52
                c-0.36,0.54-0.67,1.13-0.92,1.73s-0.44,1.23-0.57,1.87c-0.13,0.64-0.2,1.3-0.2,1.95c0,0.66,0.07,1.31,0.2,1.96
@@ -510,59 +517,59 @@
                c0.63-0.13,1.26-0.32,1.87-0.57c0.6-0.25,1.18-0.56,1.72-0.92c0.55-0.37,1.06-0.78,1.52-1.25c0.46-0.46,0.88-0.97,1.25-1.52
                c0.36-0.54,0.67-1.12,0.92-1.72c0.25-0.61,0.44-1.23,0.57-1.87c0.13-0.65,0.19-1.3,0.19-1.96
                C153.357,161.132,153.297,160.472,153.167,159.832z" />
+                                </g>
                             </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
           </svg>
-                </div>
-                <div class="detail-box">
-                    <h5>
-                        Concierge Options
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
-                        consectetur adipiscing eullamco
-                    </p>
-                    <div>
-                        <a href="">
-                            Read More
-                        </a>
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Concierge Options
+                        </h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
+                            consectetur adipiscing eullamco
+                        </p>
+                        <div>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.017 55.017" style="enable-background:new 0 0 55.017 55.017;" xml:space="preserve">
+                <div class="box">
+                    <div class="img-box">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.017 55.017" style="enable-background:new 0 0 55.017 55.017;" xml:space="preserve">
             <g>
                 <path d="M51.688,23.013H40.789c-0.553,0-1,0.447-1,1s0.447,1,1,1h9.102l2.899,27H2.268l3.403-27h9.118c0.553,0,1-0.447,1-1
              s-0.447-1-1-1H3.907L0,54.013h55.017L51.688,23.013z" />
@@ -610,517 +617,518 @@
              c0.548-0.069,0.937-0.569,0.867-1.117s-0.567-0.934-1.117-0.867c-0.404,0.052-0.812,0.064-1.216,0.015
              c-0.132-0.017-0.264-0.042-0.394-0.075c-0.535-0.143-1.08,0.181-1.22,0.716C9.139,48.158,9.459,48.704,9.993,48.842z" />
             </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
           </svg>
 
-                </div>
-                <div class="detail-box">
-                    <h5>
-                        Close And Handy
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
-                        consectetur adipiscing eullamco
-                    </p>
-                    <div>
-                        <a href="">
-                            Read More
-                        </a>
                     </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <svg height="512" viewBox="0 0 46 60" width="512" xmlns="http://www.w3.org/2000/svg">
-                        <g id="036---Office-Safe">
-                            <path id="Shape" d="m43 0h-40c-1.65685425 0-3 1.34314575-3 3v54c0 1.6568542 1.34314575 3 3 3h40c1.6568542 0 3-1.3431458 3-3v-54c0-1.65685425-1.3431458-3-3-3zm1 57c0 .5522847-.4477153 1-1 1h-40c-.55228475 0-1-.4477153-1-1v-54c0-.55228475.44771525-1 1-1h40c.5522847 0 1 .44771525 1 1z" />
-                            <path id="Shape" d="m41 4h-36c-.55228475 0-1 .44771525-1 1v50c0 .5522847.44771525 1 1 1h36c.5522847 0 1-.4477153 1-1v-50c0-.55228475-.4477153-1-1-1zm-1 50h-34v-48h34z" />
-                            <path id="Shape" d="m29 48c1.1186831.0031551 2.2037744-.3821053 3.07-1.09 1.91012-1.5226436 2.4404276-4.2025609 1.2541616-6.3379238s-3.7417977-3.1009925-6.0437556-2.283685-3.6763884 3.1782658-3.2504868 5.5835952c.4259017 2.4053294 2.5274425 4.1508119 4.9700808 4.1280136zm0-8c1.1057033-.0004129 2.1219995.6074172 2.6447165 1.5817615.5227169.9743444.4671061 2.1572319-.1447165 3.0782385l-1.7-2.26c-.2143594-.2858125-.5649147-.4355547-.9196152-.3928203-.3547006.0427344-.6596589.2714531-.8.6-.1403412.3285469-.0947442.7070078.1196152.9928203l1.69 2.25c-1.1320421.3716181-2.376708.0380924-3.1712515-.8497814-.7945436-.8878738-.9883535-2.1617931-.4938033-3.2457855.4945502-1.0839923 1.5837152-1.7725795 2.7750548-1.7544331z" />
-                            <path id="Shape" d="m10.75 46h3.25v3c0 1.6568542 1.3431458 3 3 3h18c1.6568542 0 3-1.3431458 3-3v-12c0-1.6568542-1.3431458-3-3-3h-18c-1.6568542 0-3 1.3431458-3 3v3h-3.25c-1.51650541.0054847-2.7445153 1.2334946-2.75 2.75v.5c.0054847 1.5165054 1.23349459 2.7445153 2.75 2.75zm5.25-9c0-.5522847.4477153-1 1-1h18c.5522847 0 1 .4477153 1 1v12c0 .5522847-.4477153 1-1 1h-18c-.5522847 0-1-.4477153-1-1v-3h3.25c1.5165054-.0054847 2.7445153-1.2334946 2.75-2.75v-.5c-.0054847-1.5165054-1.2334946-2.7445153-2.75-2.75h-3.25zm-6 5.75c.0053858-.4119621.3380379-.7446142.75-.75h8.5c.4119621.0053858.7446142.3380379.75.75v.5c-.0053858.4119621-.3380379.7446142-.75.75h-8.5c-.4119621-.0053858-.7446142-.3380379-.75-.75z" />
-                            <path id="Shape" d="m11 26h8c1.6568542 0 3-1.3431458 3-3v-12c0-1.65685425-1.3431458-3-3-3h-8c-1.65685425 0-3 1.34314575-3 3v12c0 1.6568542 1.34314575 3 3 3zm-1-15c0-.5522847.4477153-1 1-1h8c.5522847 0 1 .4477153 1 1v12c0 .5522847-.4477153 1-1 1h-8c-.5522847 0-1-.4477153-1-1z" />
-                            <circle id="Oval" cx="13" cy="13" r="1" />
-                            <circle id="Oval" cx="17" cy="13" r="1" />
-                            <circle id="Oval" cx="13" cy="17" r="1" />
-                            <circle id="Oval" cx="17" cy="17" r="1" />
-                            <circle id="Oval" cx="13" cy="21" r="1" />
-                            <circle id="Oval" cx="17" cy="21" r="1" />
-                        </g>
-                    </svg>
-
-                </div>
-                <div class="detail-box">
-                    <h5>
-                        Safe And Secure
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
-                        consectetur adipiscing eullamco
-                    </p>
-                    <div>
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end service section -->
-
-    <!-- client section -->
-
-    <section class="client_section layout_padding">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    What Our Customers Say
-                </h2>
-            </div>
-            <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExample2Indicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExample2Indicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExample2Indicators" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="{{ asset('assets/images/client.png') }}" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    laboris nisi
-                                </h6>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="{{ asset('assets/images/client.png') }}" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    laboris nisi
-                                </h6>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="{{ asset('assets/images/client.png') }}" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    laboris nisi
-                                </h6>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="{{ asset('assets/images/client.png') }}" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    laboris nisi
-                                </h6>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="{{ asset('assets/images/client.png') }}" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    laboris nisi
-                                </h6>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex
-                                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- end client section -->
-
-    <!-- rate section -->
-
-    <section class="rate_section layout_padding">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Parking Options and Rates
-                </h2>
-            </div>
-            <div class="rate_container">
-                <div class="box">
                     <div class="detail-box">
-                        <div class="price">
-                            <h3>
-                                $ <span>30</span> /day
-
-                            </h3>
-                            <h6>
-                                Basic
-                            </h6>
-                        </div>
+                        <h5>
+                            Close And Handy
+                        </h5>
                         <p>
-                            long established fact a reader will be distracted by the readable content of a page when looking at its
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
+                            consectetur adipiscing eullamco
                         </p>
-                    </div>
-                    <div class="btn-box">
-                        <a href="">
-                            Read More
-                        </a>
+                        <div>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="box">
-                    <div class="detail-box">
-                        <div class="price">
-                            <h3>
-                                $ <span>40</span> /day
+                    <div class="img-box">
+                        <svg height="512" viewBox="0 0 46 60" width="512" xmlns="http://www.w3.org/2000/svg">
+                            <g id="036---Office-Safe">
+                                <path id="Shape" d="m43 0h-40c-1.65685425 0-3 1.34314575-3 3v54c0 1.6568542 1.34314575 3 3 3h40c1.6568542 0 3-1.3431458 3-3v-54c0-1.65685425-1.3431458-3-3-3zm1 57c0 .5522847-.4477153 1-1 1h-40c-.55228475 0-1-.4477153-1-1v-54c0-.55228475.44771525-1 1-1h40c.5522847 0 1 .44771525 1 1z" />
+                                <path id="Shape" d="m41 4h-36c-.55228475 0-1 .44771525-1 1v50c0 .5522847.44771525 1 1 1h36c.5522847 0 1-.4477153 1-1v-50c0-.55228475-.4477153-1-1-1zm-1 50h-34v-48h34z" />
+                                <path id="Shape" d="m29 48c1.1186831.0031551 2.2037744-.3821053 3.07-1.09 1.91012-1.5226436 2.4404276-4.2025609 1.2541616-6.3379238s-3.7417977-3.1009925-6.0437556-2.283685-3.6763884 3.1782658-3.2504868 5.5835952c.4259017 2.4053294 2.5274425 4.1508119 4.9700808 4.1280136zm0-8c1.1057033-.0004129 2.1219995.6074172 2.6447165 1.5817615.5227169.9743444.4671061 2.1572319-.1447165 3.0782385l-1.7-2.26c-.2143594-.2858125-.5649147-.4355547-.9196152-.3928203-.3547006.0427344-.6596589.2714531-.8.6-.1403412.3285469-.0947442.7070078.1196152.9928203l1.69 2.25c-1.1320421.3716181-2.376708.0380924-3.1712515-.8497814-.7945436-.8878738-.9883535-2.1617931-.4938033-3.2457855.4945502-1.0839923 1.5837152-1.7725795 2.7750548-1.7544331z" />
+                                <path id="Shape" d="m10.75 46h3.25v3c0 1.6568542 1.3431458 3 3 3h18c1.6568542 0 3-1.3431458 3-3v-12c0-1.6568542-1.3431458-3-3-3h-18c-1.6568542 0-3 1.3431458-3 3v3h-3.25c-1.51650541.0054847-2.7445153 1.2334946-2.75 2.75v.5c.0054847 1.5165054 1.23349459 2.7445153 2.75 2.75zm5.25-9c0-.5522847.4477153-1 1-1h18c.5522847 0 1 .4477153 1 1v12c0 .5522847-.4477153 1-1 1h-18c-.5522847 0-1-.4477153-1-1v-3h3.25c1.5165054-.0054847 2.7445153-1.2334946 2.75-2.75v-.5c-.0054847-1.5165054-1.2334946-2.7445153-2.75-2.75h-3.25zm-6 5.75c.0053858-.4119621.3380379-.7446142.75-.75h8.5c.4119621.0053858.7446142.3380379.75.75v.5c-.0053858.4119621-.3380379.7446142-.75.75h-8.5c-.4119621-.0053858-.7446142-.3380379-.75-.75z" />
+                                <path id="Shape" d="m11 26h8c1.6568542 0 3-1.3431458 3-3v-12c0-1.65685425-1.3431458-3-3-3h-8c-1.65685425 0-3 1.34314575-3 3v12c0 1.6568542 1.34314575 3 3 3zm-1-15c0-.5522847.4477153-1 1-1h8c.5522847 0 1 .4477153 1 1v12c0 .5522847-.4477153 1-1 1h-8c-.5522847 0-1-.4477153-1-1z" />
+                                <circle id="Oval" cx="13" cy="13" r="1" />
+                                <circle id="Oval" cx="17" cy="13" r="1" />
+                                <circle id="Oval" cx="13" cy="17" r="1" />
+                                <circle id="Oval" cx="17" cy="17" r="1" />
+                                <circle id="Oval" cx="13" cy="21" r="1" />
+                                <circle id="Oval" cx="17" cy="21" r="1" />
+                            </g>
+                        </svg>
 
-                            </h3>
-                            <h6>
-                                Standard
-                            </h6>
-                        </div>
-                        <p>
-                            long established fact a reader will be distracted by the readable content of a page when looking at its
-                        </p>
                     </div>
-                    <div class="btn-box">
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-                <div class="box">
                     <div class="detail-box">
-                        <div class="price">
-                            <h3>
-                                $ <span>50</span> /day
-
-                            </h3>
-                            <h6>
-                                Premium
-                            </h6>
-                        </div>
+                        <h5>
+                            Safe And Secure
+                        </h5>
                         <p>
-                            long established fact a reader will be distracted by the readable content of a page when looking at its
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoLorem ipsum dolor sit amet,
+                            consectetur adipiscing eullamco
                         </p>
-                    </div>
-                    <div class="btn-box">
-                        <a href="">
-                            Read More
-                        </a>
+                        <div>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- end rate section -->
+        <!-- end service section -->
 
-    <!-- contact section -->
+        <!-- client section -->
 
-    <section class="contact_section layout_padding">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Contact Us
-                </h2>
+        <section class="client_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        What Our Customers Say
+                    </h2>
+                </div>
+                <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExample2Indicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExample2Indicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExample2Indicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/images/client.png') }}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>
+                                        laboris nisi
+                                    </h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/images/client.png') }}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>
+                                        laboris nisi
+                                    </h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/images/client.png') }}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>
+                                        laboris nisi
+                                    </h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/images/client.png') }}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>
+                                        laboris nisi
+                                    </h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/images/client.png') }}" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>
+                                        laboris nisi
+                                    </h6>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="">
-                <div class="row">
-                    <div class="col-md-6 mx-auto">
-                        <form action="">
-                            <div class="contact_form-container">
-                                <div>
+        </section>
+
+        <!-- end client section -->
+
+        <!-- rate section -->
+
+        <section class="rate_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        Parking Options and Rates
+                    </h2>
+                </div>
+                <div class="rate_container">
+                    <div class="box">
+                        <div class="detail-box">
+                            <div class="price">
+                                <h3>
+                                    $ <span>30</span> /day
+
+                                </h3>
+                                <h6>
+                                    Basic
+                                </h6>
+                            </div>
+                            <p>
+                                long established fact a reader will be distracted by the readable content of a page when looking at its
+                            </p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="detail-box">
+                            <div class="price">
+                                <h3>
+                                    $ <span>40</span> /day
+
+                                </h3>
+                                <h6>
+                                    Standard
+                                </h6>
+                            </div>
+                            <p>
+                                long established fact a reader will be distracted by the readable content of a page when looking at its
+                            </p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="detail-box">
+                            <div class="price">
+                                <h3>
+                                    $ <span>50</span> /day
+
+                                </h3>
+                                <h6>
+                                    Premium
+                                </h6>
+                            </div>
+                            <p>
+                                long established fact a reader will be distracted by the readable content of a page when looking at its
+                            </p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end rate section -->
+
+        <!-- contact section -->
+
+        <section class="contact_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        Contact Us
+                    </h2>
+                </div>
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <form action="">
+                                <div class="contact_form-container">
                                     <div>
-                                        <input type="text" placeholder="Name">
+                                        <div>
+                                            <input type="text" placeholder="Name">
+                                        </div>
+                                        <div>
+                                            <input type="email" placeholder="Email">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Phone Number">
+                                        </div>
+                                        <div class="">
+                                            <input type="text" placeholder="Message" class="message_input">
+                                        </div>
+                                        <div class="mt-5 d-flex justify-content-center ">
+                                            <button type="submit">
+                                                Send
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input type="email" placeholder="Email">
-                                    </div>
-                                    <div>
-                                        <input type="text" placeholder="Phone Number">
-                                    </div>
-                                    <div class="">
-                                        <input type="text" placeholder="Message" class="message_input">
-                                    </div>
-                                    <div class="mt-5 d-flex justify-content-center ">
-                                        <button type="submit">
-                                            Send
-                                        </button>
-                                    </div>
+
                                 </div>
 
-                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+
+        <!-- end contact section -->
+
+        <!-- info section -->
+
+        <section class="info_section ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h6>
+                            Subscribe Now
+                        </h6>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available,
+                        </p>
+                        <form action="">
+                            <input type="text" placeholder="Enter your email">
+                            <div class="d-flex justify-content-end">
+                                <button>
+                                    subscribe
+                                </button>
+                            </div>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- end contact section -->
-
-    <!-- info section -->
-
-    <section class="info_section ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h6>
-                        Subscribe Now
-                    </h6>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available,
-                    </p>
-                    <form action="">
-                        <input type="text" placeholder="Enter your email">
-                        <div class="d-flex justify-content-end">
-                            <button>
-                                subscribe
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-2">
-                    <h6>
-                        Information
-                    </h6>
-                    <ul>
-                        <li>
-                            <a href="">
-                                There are many
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                variations of
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                passages of Lorem
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Ipsum available,
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                but the majority
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <h6>
-                        Helpful Links
-                    </h6>
-                    <ul>
-                        <li>
-                            <a href="">
-                                There are many
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                variations of
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                passages of Lorem
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Ipsum available,
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                but the majority
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <h6>
-                        Invesments
-                    </h6>
-                    <ul>
-                        <li>
-                            <a href="">
-                                There are many
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                variations of
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                passages of Lorem
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Ipsum available,
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                but the majority
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <h6>
-                        Contact Us
-                    </h6>
-                    <div class="info_link-box">
-                        <a href="https://goo.gl/maps/c41pZiD1JrsYPR5f8">
-                            <img src="{{ asset('assets/images/location.png') }}" alt="">
-                            <span> Location</span>
-                        </a>
-                        <a href="tel: 21553729">
-                            <img src="{{ asset('assets/images/call.png') }}" alt="">
-                            <span>21 553 729</span>
-                        </a>
-                        <a href="mailto:Auto-park@gmail.com">
-                            <img src="{{ asset('assets/images/envelope.png') }}" alt="">
-                            <span> Auto-prk@gmail.tn</span>
-                        </a>
+                    <div class="col-lg-2">
+                        <h6>
+                            Information
+                        </h6>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    There are many
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    variations of
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    passages of Lorem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Ipsum available,
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    but the majority
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="info_social">
-                        <div>
-                            <a href="https://www.facebook.com">
-                                <img id="" src={{ asset('assets/images/fb.png') }} alt="" >
-
+                    <div class="col-lg-2">
+                        <h6>
+                            Helpful Links
+                        </h6>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    There are many
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    variations of
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    passages of Lorem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Ipsum available,
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    but the majority
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h6>
+                            Invesments
+                        </h6>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    There are many
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    variations of
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    passages of Lorem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Ipsum available,
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    but the majority
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h6>
+                            Contact Us
+                        </h6>
+                        <div class="info_link-box">
+                            <a href="https://goo.gl/maps/c41pZiD1JrsYPR5f8">
+                                <img src="{{ asset('assets/images/location.png') }}" alt="">
+                                <span> Location</span>
+                            </a>
+                            <a href="tel: 21553729">
+                                <img src="{{ asset('assets/images/call.png') }}" alt="">
+                                <span>21 553 729</span>
+                            </a>
+                            <a href="mailto:Auto-park@gmail.com">
+                                <img src="{{ asset('assets/images/envelope.png') }}" alt="">
+                                <span> Auto-prk@gmail.tn</span>
                             </a>
                         </div>
-                        <div>
-                            <a href="https://www.twitter.com">
+                        <div class="info_social">
+                            <div>
+                                <a href="https://www.facebook.com">
+                                    <img id="" src={{ asset('assets/images/fb.png') }} alt="" >
 
-                                <img id="" src={{ asset('assets/images/twitter.png') }} alt="" >
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://www.twitter.com">
 
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.linkedin.com">
+                                    <img id="" src={{ asset('assets/images/twitter.png') }} alt="" >
 
-                                <img id="" src={{ asset('assets/images/linkedin.png') }} alt="" >
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://www.linkedin.com">
 
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.instagram.com">
-                                <img id="" src={{ asset('assets/images/insta.png') }} alt="" >
+                                    <img id="" src={{ asset('assets/images/linkedin.png') }} alt="" >
 
-                            </a>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://www.instagram.com">
+                                    <img id="" src={{ asset('assets/images/insta.png') }} alt="" >
+
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- end info section -->
-
-
-    <!-- footer section -->
-    <section class="container-fluid footer_section">
-        <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved By
-            <a href="https://html.design/">Free Html Templates</a>
-        </p>
-    </section>
-    <!-- footer section -->
+        <!-- end info section -->
 
 
-{% endblock %}
-</body>
-</html>
+        <!-- footer section -->
+        <section class="container-fluid footer_section">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="https://html.design/">Free Html Templates</a>
+            </p>
+        </section>
+        <!-- footer section -->
+
+
+    {% endblock %}
+    </body>
+    </html>
+
