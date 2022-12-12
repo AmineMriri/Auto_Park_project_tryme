@@ -1,0 +1,86 @@
+{#{% extends 'base.html.twig' %}#}
+
+{#{% block title %}Log in!{% endblock %}#}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Autopark{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+
+
+        <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet"/>
+
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <div><img id="photo" src={{ asset('assets/images/parking.png')}} alt="" ></div>
+
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+{#    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>#}
+{#    <label for="inputEmail">Email</label>#}
+    <div class="box">
+        <div class="form">
+            <h2>Sign In</h2>
+            <div class="inputBox">
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+{#    <label for="inputPassword">Password</label>#}
+                <span>Email</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                <span>Password</span>
+                <i></i>
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+        </div>
+            <div class="links">
+                <br>
+                <br>      <br><br>      <a href="">Forgot Password?</a>
+
+                <a href="{{ path('registration') }}">Sign Up</a>
+            </div>
+            <div class="middle_button">
+                <button class="" type="submit">
+                    Sign in
+                </button>
+            </div>
+
+        </div>
+    </div>
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+
+
+</form>
+{% endblock %}
