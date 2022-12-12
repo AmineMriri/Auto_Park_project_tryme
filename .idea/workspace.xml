@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="fixed form reservation">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20221211012347.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+    <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="hamdoullah ya za7i">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221210120002.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20221211014550.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221210120240.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/sign-up.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/sign-up.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InscritController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InscritController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +242,9 @@
       <workItem from="1670729990856" duration="948000" />
       <workItem from="1670730975763" duration="1054000" />
       <workItem from="1670773709255" duration="1478000" />
-      <workItem from="1670798128564" duration="8258000" />
+      <workItem from="1670798128564" duration="8637000" />
+      <workItem from="1670849760254" duration="625000" />
+      <workItem from="1670873574362" duration="1035000" />
     </task>
     <task id="LOCAL-00001" summary="5amsa w 5miss">
       <created>1670585634934</created>
@@ -311,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670672976294</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed form reservation">
+      <created>1670806563507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670806563507</updated>
+    </task>
+    <task id="LOCAL-00009" summary="hamdoullah ya za7i">
+      <created>1670806766889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670806766889</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +326,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -345,6 +343,7 @@
     <MESSAGE value="5amsa w 5miss" />
     <MESSAGE value="2" />
     <MESSAGE value="fixed form reservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed form reservation" />
+    <MESSAGE value="hamdoullah ya za7i" />
+    <option name="LAST_COMMIT_MESSAGE" value="hamdoullah ya za7i" />
   </component>
 </project>
