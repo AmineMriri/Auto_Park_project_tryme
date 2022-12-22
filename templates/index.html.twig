@@ -48,7 +48,7 @@
 
                         <a class="navbar-brand" href="{{ path('app_index') }}">
             <span>
-              Autospar
+              Auto-park
             </span>
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,14 +74,18 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ path('app_contact') }}">Contact us</a>
                                     </li>
+                                    {% if not app.user %}
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ path('app_login') }}">Sign-In/Sign-Up</a>
+                                        <a class="nav-link" href="{{ path('app_login') }}">Sign-In</a>
                                     </li>
+                                    {% else %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+                                        </li>
+                                    {% endif %}
                                 </ul>
 
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
+
                             </div>
                         </div>
                     </nav>
@@ -104,8 +108,9 @@
                                         Deals For Parking lots
                                     </h1>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
+
                                     </p>
                                     <div>
                                         <a href="">
@@ -124,8 +129,8 @@
                                         Deals For Parking lots
                                     </h1>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
                                     </p>
                                     <div>
                                         <a href="">
@@ -156,23 +161,27 @@
                 <form action="" method="Post">
                     {{ form_start(formReserv) }}
                     <div class=" form-row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-2">
                             {{ form_label(formReserv.name) }}
                             {{ form_widget(formReserv.name) }}
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2">
                             {{ form_label(formReserv.phone) }}
                             {{ form_widget(formReserv.phone) }}
                         </div>
-
-                        <div class="col-lg-2">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-1">
                             {{ form_label(formReserv.periode) }}
+                            <br>
                             {{ form_widget(formReserv.periode) }}
                         </div>
+
                         <div class="col-lg-2">
                             {{ form_label(formReserv.park) }}
                             {{ form_widget(formReserv.park) }}
                         </div>
+                        <div class="col-lg-1"></div>
                         <div class="col-lg-2">
                             <div class="btn-container">
                                 <button type="submit" class="">
@@ -187,9 +196,21 @@
             </div>
         </section>
         {% else %}
-            <div class="mb-3">
-                You have to <a href="{{ path('app_login') }}">login</a> to perchase a parking spot
-            </div>
+            <section class="find_section">
+                <div class="container">
+
+
+                        <div class=" form-row">
+                            <div class="col-lg-4">
+                                You have to <a href="{{ path('app_login') }}">login</a> to perchase a parking spot
+                            </div>
+                        </div>
+
+
+
+                </div>
+            </section>
+
         {% endif %}
 
         <!-- end find section -->
@@ -731,13 +752,11 @@
                                 </div>
                                 <div class="detail-box">
                                     <h6>
-                                        laboris nisi
+                                        Hama harbi
                                     </h6>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
                                     </p>
                                 </div>
                             </div>
@@ -749,13 +768,11 @@
                                 </div>
                                 <div class="detail-box">
                                     <h6>
-                                        laboris nisi
+                                        Hama harbi
                                     </h6>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
                                     </p>
                                 </div>
                             </div>
@@ -767,13 +784,11 @@
                                 </div>
                                 <div class="detail-box">
                                     <h6>
-                                        laboris nisi
+                                        Hama harbi
                                     </h6>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
                                     </p>
                                 </div>
                             </div>
@@ -785,13 +800,11 @@
                                 </div>
                                 <div class="detail-box">
                                     <h6>
-                                        laboris nisi
+                                        hama harbi
                                     </h6>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
                                     </p>
                                 </div>
                             </div>
@@ -803,13 +816,11 @@
                                 </div>
                                 <div class="detail-box">
                                     <h6>
-                                        laboris nisi
+                                        Hama harbi
                                     </h6>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        Ay sican Ay sican Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican
+                                        Ay sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sicanAy sican Ay sican
                                     </p>
                                 </div>
                             </div>

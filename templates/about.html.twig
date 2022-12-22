@@ -12,7 +12,7 @@
             <meta name="description" content="" />
             <meta name="author" content="" />
 
-            <title>{% block title %}Autopark{% endblock %}</title>
+            <title>{% block title %}Auto-park{% endblock %}</title>
             {# Run `composer require symfony/webpack-encore-bundle`
                    and uncomment the following Encore helpers to start using Symfony UX #}
             {% block stylesheets %}
@@ -25,10 +25,6 @@
 
             {% endblock %}
 
-{#            {% block javascripts %}#}
-{#                #}{#{{ encore_entry_script_tags('app') }}#}
-
-{#            {% endblock %}#}
         </head>
     <body class="sub_page">
     {% block body %}
@@ -66,12 +62,18 @@
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ path('app_contact') }}">Contact us</a>
-
                                     </li>
+                                    {% if not app.user %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ path('app_login') }}">Sign-In</a>
+                                        </li>
+                                    {% else %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+                                        </li>
+                                    {% endif %}
                                 </ul>
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
+
                             </div>
                         </div>
                     </nav>
@@ -333,9 +335,9 @@
         <!-- footer section -->
         <section class="container-fluid footer_section">
             <p>
-                &copy; <span id="displayYear"></span> All Rights Reserved By
+                &copy; <span id="displayYear"></span> All Rights Reserved
 
-                    <a href="https://html.design/">Free Html Templates</a>
+
             </p>
         </section>
         <!-- footer section -->

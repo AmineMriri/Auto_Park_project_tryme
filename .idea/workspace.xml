@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="hamdoullah ya za7i">
+    <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="e5dem nayek">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/feature.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feature.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inscrit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +202,9 @@
       <recent name="C:\wamp64\www\park-auto\src\Controller" />
       <recent name="C:\wamp64\www\park-auto\templates" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\Auto_Park_project_tryme\templates\useless" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -244,7 +257,9 @@
       <workItem from="1670773709255" duration="1478000" />
       <workItem from="1670798128564" duration="8637000" />
       <workItem from="1670849760254" duration="625000" />
-      <workItem from="1670873574362" duration="1035000" />
+      <workItem from="1670873574362" duration="2086000" />
+      <workItem from="1670886155913" duration="743000" />
+      <workItem from="1671734887559" duration="6342000" />
     </task>
     <task id="LOCAL-00001" summary="5amsa w 5miss">
       <created>1670585634934</created>
@@ -309,7 +324,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670806766889</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="e5dem nayek">
+      <created>1670885092910</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670885092910</updated>
+    </task>
+    <task id="LOCAL-00011" summary="e5dem nayek">
+      <created>1670885371966</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670885371966</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +373,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="fixed form reservation" />
     <MESSAGE value="hamdoullah ya za7i" />
-    <option name="LAST_COMMIT_MESSAGE" value="hamdoullah ya za7i" />
+    <MESSAGE value="e5dem nayekk" />
+    <MESSAGE value="e5dem nayek" />
+    <option name="LAST_COMMIT_MESSAGE" value="e5dem nayek" />
   </component>
 </project>

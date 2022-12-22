@@ -54,14 +54,13 @@
                     <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                         <ul class="navbar-nav  ">
                             <li class="nav-item ">
-
                                 <a class="nav-link" href="{{ path('app_index') }}">Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_about') }}"> About Us</a>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ path('app_about') }}">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_feature') }}"> Features </a>
+                                <a class="nav-link" href="{{ path('app_feature') }}">Features </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ path('app_service') }}"> Services </a>
@@ -70,10 +69,17 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ path('app_contact') }}">Contact us</a>
                             </li>
+                            {% if not app.user %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_login') }}">Sign-In</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+                                </li>
+                            {% endif %}
                         </ul>
-                        <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                        </form>
+
                     </div>
                 </div>
             </nav>
@@ -309,8 +315,7 @@
 <!-- footer section -->
 <section class="container-fluid footer_section">
     <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        &copy; <span id="displayYear"></span> All Rights Reserved
     </p>
 </section>
 <!-- footer section -->

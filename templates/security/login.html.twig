@@ -1,25 +1,15 @@
-{#{% extends 'base.html.twig' %}#}
-
-{#{% block title %}Log in!{% endblock %}#}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Autopark{% endblock %}</title>
+    <title>{% block title %}Auto-park{% endblock %}</title>
     {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
     {% block stylesheets %}
-
-
         <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet"/>
-
-
     {% endblock %}
 
-    {% block javascripts %}
-        {#{{ encore_entry_script_tags('app') }}#}
-    {% endblock %}
 </head>
 <body>
 {% block body %}
@@ -36,14 +26,13 @@
         </div>
     {% endif %}
 
-{#    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>#}
-{#    <label for="inputEmail">Email</label>#}
+
     <div class="box">
         <div class="form">
             <h2>Sign In</h2>
             <div class="inputBox">
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-{#    <label for="inputPassword">Password</label>#}
+
                 <span>Email</span>
                 <i></i>
             </div>
@@ -58,7 +47,7 @@
         </div>
             <div class="links">
                 <br>
-                <br>      <br><br>      <a href="">Forgot Password?</a>
+                <br>      <br>
 
                 <a href="{{ path('registration') }}">Sign Up</a>
             </div>
@@ -70,16 +59,7 @@
 
         </div>
     </div>
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
+   
 
 
 </form>

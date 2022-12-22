@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("/index", name="app_index")
+     * @Route("/", name="app_index")
      */
 //    public function index()
 //    {
@@ -34,7 +34,7 @@ class IndexController extends AbstractController
             $em->persist($res);
             $em->flush();
 
-            return $this->redirectToRoute('app_reserv');
+            return $this->redirectToRoute('app_index');
         }
         return $this->render('/index.html.twig',
             [
