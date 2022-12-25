@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="e5dem nayek">
+    <list default="true" id="6886b7c4-f5f4-4f72-a665-48db7acf0839" name="Changes" comment="ay sican ay sican">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20221223223920.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20221223233128.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ListResController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SubscriptionType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SubscriptionRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/list_res/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/listeRes.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/listusers.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/users/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/feature.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feature.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inscrit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,11 +219,12 @@
       <command value="symfony console make:user" />
       <command value="symfony make:auth" />
       <command value="symfony make:entity " />
-      <command value="symfony make:form " />
-      <command value="symfony make:entity  " />
       <command value="symfony doctrine:database:create" />
+      <command value="symfony make:entity  " />
+      <command value="symfony make:form " />
       <command value="symfony make:migration" />
       <command value="symfony doctrine:migrations:migrate " />
+      <command value="symfony make:controller" />
     </option>
   </component>
   <component name="RunManager">
@@ -259,7 +265,10 @@
       <workItem from="1670849760254" duration="625000" />
       <workItem from="1670873574362" duration="2086000" />
       <workItem from="1670886155913" duration="743000" />
-      <workItem from="1671734887559" duration="6342000" />
+      <workItem from="1671734887559" duration="7655000" />
+      <workItem from="1671799119361" duration="2405000" />
+      <workItem from="1671826660173" duration="1282000" />
+      <workItem from="1671828911291" duration="10991000" />
     </task>
     <task id="LOCAL-00001" summary="5amsa w 5miss">
       <created>1670585634934</created>
@@ -338,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670885371966</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ay sican ay sican">
+      <created>1671751368223</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671751368223</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +391,7 @@
     <MESSAGE value="hamdoullah ya za7i" />
     <MESSAGE value="e5dem nayekk" />
     <MESSAGE value="e5dem nayek" />
-    <option name="LAST_COMMIT_MESSAGE" value="e5dem nayek" />
+    <MESSAGE value="ay sican ay sican" />
+    <option name="LAST_COMMIT_MESSAGE" value="ay sican ay sican" />
   </component>
 </project>

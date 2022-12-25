@@ -79,9 +79,9 @@
                                         <a class="nav-link" href="{{ path('app_login') }}">Sign-In</a>
                                     </li>
                                     {% else %}
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
-                                        </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+                                    </li>
                                     {% endif %}
                                 </ul>
 
@@ -924,20 +924,25 @@
                 <div class="">
                     <div class="row">
                         <div class="col-md-6 mx-auto">
-                            <form action="">
+                            <form action="" method="post">
+                                {{ form_start(formContact) }}
                                 <div class="contact_form-container">
                                     <div>
                                         <div>
-                                            <input type="text" placeholder="Name">
+                                            {{ form_label(formContact.name) }}
+                                            {{ form_widget(formContact.name) }}
                                         </div>
                                         <div>
-                                            <input type="email" placeholder="Email">
+                                            {{ form_label(formContact.email) }}
+                                            {{ form_widget(formContact.email) }}
                                         </div>
                                         <div>
-                                            <input type="text" placeholder="Phone Number">
+                                            {{ form_label(formContact.phone) }}
+                                            {{ form_widget(formContact.phone) }}
                                         </div>
                                         <div class="">
-                                            <input type="text" placeholder="Message" class="message_input">
+                                            {{ form_label(formContact.message) }}
+                                            {{ form_widget(formContact.message) }}
                                         </div>
                                         <div class="mt-5 d-flex justify-content-center ">
                                             <button type="submit">
@@ -947,7 +952,7 @@
                                     </div>
 
                                 </div>
-
+                                {{ form_end(formContact) }}
                             </form>
                         </div>
                     </div>
@@ -970,14 +975,26 @@
                         <p>
                             There are many variations of passages of Lorem Ipsum available,
                         </p>
-                        <form action="">
-                            <input type="text" placeholder="Enter your email">
+
+
+
+                        <form action="" method="post">
+                            {{ form_start(formSubscription) }}
+{#                            <input type="text" placeholder="Enter your email">#}
+
+                            {{ form_label(formSubscription.email) }}
+                            {{ form_widget(formSubscription.email) }}
                             <div class="d-flex justify-content-end">
                                 <button>
                                     subscribe
                                 </button>
                             </div>
+                            {{ form_end(formSubscription) }}
                         </form>
+
+
+
+
                     </div>
                     <div class="col-lg-2">
                         <h6>

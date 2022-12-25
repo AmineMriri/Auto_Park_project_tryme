@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>{% block title %}Autopark{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to symfonystart using Symfony UX #}
+    {% block stylesheets %}
+        {#{{ encore_entry_link_tags('app') }}#}
+        <!-- bootstrap core css -->
+        <link  href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet" />
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link  href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+        <!-- responsive style -->
+        <link  href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
+    {% endblock %}
+
+    {% block javascripts %}
+        {#{{ encore_entry_script_tags('app') }}#}
+        <script type="text/javascript"  src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+        <script type="text/javascript"  src="{{ asset('assets/js/bootstrap.js') }}"></script>
+        <script type="text/javascript"  src="{{ asset('assets/js/custom.js') }}"></script>
+
+    {% endblock %}
+</head>
+{% block body %}
+
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+
+                <a class="navbar-brand" href="{{ path('app_index') }}">
+            <span>
+              Auto-park
+            </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="{{ path('app_users') }}">Manage users <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ path('app_res') }}">Manage Reservations</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <center>
+        <h1>Liste des utilisateurs</h1>
+        <table border="4">
+            <tr><td>email</td>
+                <td>role</td>
+            </tr>
+            {% for u in listusers %}
+                <tr>
+                    <td>{{ u.email }}</td>
+                    <td>{{ u.getRoless() }}</td>
+                    <td> <a href="{{ path('app_deluser',{'id':u.id}) }}">Delete user</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+{% endblock %}
+
+
+
